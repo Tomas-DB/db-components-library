@@ -1,11 +1,15 @@
 import React from 'react';
+import './Button.css';
 
-interface ButtonProps {
+export type ButtonProps = {
+  /**
+   * Button Label
+   */
   label: string;
-}
+};
 
 const Button: React.FC<ButtonProps> = ({ label = 'My Button' }) => {
-  return <button>{label}</button>;
+  return <button className="btn">{label}</button>;
 };
 
 export default Button;
